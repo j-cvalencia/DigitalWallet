@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billetera digital</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Login and create account buttons -->
+    <div id="containsButtons">
+      <button id="createAccount">Crear cuenta</button>
+      <button id="initialAccount">Iniciar sesion</button>
+    </div>
+
+    <!-- Create account form -->
+    <div id="modalCreateAccount">
+      <form action="" class="formCreateAccount">
+        <label for="name">
+          Nombre
+          <input
+            type="text"
+            id="name"
+            placeholder="Digite su nombre"
+            required
+          />
+        </label>
+
+        <label for="lastname">
+          Apellido
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Digite su apellido"
+            required
+          />
+        </label>
+
+        <label for="id">
+          Documento de identidad
+          <input
+            type="number"
+            id="id"
+            placeholder="Digite su numero de documento"
+            required
+          />
+        </label>
+
+        <label for="email">
+          Correo
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite su correo (Opcional)"
+          />
+        </label>
+
+        <label for="cellNumber">
+          Numero de celular
+          <input
+            type="number"
+            id="cellNumber"
+            placeholder="Digite su telefono (Opcional)"
+          />
+        </label>
+
+        <label for="password">
+          Contraseña
+          <input
+            type="password"
+            id="password"
+            placeholder="Digite su contraseña"
+            required
+          />
+        </label>
+
+        <label for="confirmPassword">
+          Confirmar contraseña
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirme su contraseña"
+            required
+          />
+        </label>
+
+        <button>Enviar</button>
+
+        <div class="closeCreateAccount">X</div>
+      </form>
+    </div>
+
+    <!-- login form -->
+    <div id="modalInitialAccount">
+      <form action="" class="formInitialAccount">
+        <label for="id">
+          Documento de identidad
+          <input type="number" id="idAccess" />
+        </label>
+
+        <label for="password">
+          Contraseña
+          <input type="password" id="passwordAccess" />
+        </label>
+
+        <button id="formSubmit">Enviar</button>
+
+        <div class="closeInitialAccount">X</div>
+      </form>
+    </div>
+
+
+    <div id="cashier">
+      <!-- Action buttons -->
+      <div id="mainButtons">
+        <button id="returnButtonCashier"><-</button>
+
+        <button id="deposit">Depositar</button>
+        <button id="remove">Retirar</button>
+        <button id="transfer">Transferir</button>
+        <button id="viewBalance">Ver saldo</button>
+      </div>
+
+      <!-- Quantity buttons -->
+      <div id="secondaryButtons">
+        <button class="returnButtonMainButtons"><-</button>
+        <button class="moneyButton" value="10000">10.000</button>
+        <button class="moneyButton" value="20000">20.000</button>
+        <button class="moneyButton" value="50000">50.000</button>
+        <button class="moneyButton" value="100000">100.000</button>
+        <button class="moneyButton" value="500000">500.000</button>
+        <button class="moneyButton" value="1000000">1.000.000</button>
+        <button class="moneyButton" value="3000000">3.000.000</button>
+        <button class="moneyButtonInput">Otro monto...</button>
+      </div>
+
+      <!-- Transfer form -->
+      <div id="transferInput">
+        <button class="returnButtonMainButtons"><-</button>
+        <form action="" id="formTransfer">
+          <label for="accountTransfered">
+            Cuenta a trasferir
+            <input type="number" id="accountTransfered" />
+          </label>
+          <label for="Quantity">
+            Cantidad
+            <input type="number" id="Quantity" />
+          </label>
+          <button>Enviar</button>
+        </form>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

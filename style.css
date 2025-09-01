@@ -1,0 +1,224 @@
+/* GENERALS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(37deg, #4e4e4b, #247fb7);
+  color: black;
+  font-size: 25px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* INITIAL BUTTON CONTAINET (CREATE/START) */
+#containsButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Create account / Login buttons */
+#createAccount,
+#initialAccount {
+  filter: drop-shadow(0px 0px 10px black);
+  border-radius: 20px;
+  width: 350px;
+  text-wrap: balance;
+  outline: none;
+  border: none;
+  font-size: 1.8em;
+  padding: 30px;
+}
+
+/* MODALS TO CREATE ACCOUNT AND LOGIN */
+#modalCreateAccount,
+#modalInitialAccount {
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #111a;
+}
+
+/* GENERAL STYLES FOR FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  padding: 25px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  font-size: 1.5em;
+}
+
+form > button {
+  padding: 20px;
+  font-size: 1.5em;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+/* Lock button (X) on the modals */
+.closeCreateAccount,
+.closeInitialAccount {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0px;
+  position: absolute;
+  cursor: pointer;
+}
+
+/* Hover over the close button */
+.closeCreateAccount:hover,
+.closeInitialAccount:hover {
+  background-color: rgb(138, 0, 0);
+}
+
+/* MAIN VIEW OF THE ATM */
+#cashier {
+  display: none;
+  background-color: transparent;
+  width: 100%;
+  padding: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* MAIN CASHIER BUTTON SECTION */
+#mainButtons {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#mainButtons > button {
+  padding: 30px;
+  font-size: 1.5em;
+}
+
+/* SECONDARY BUTTONS (AMOUNT OF MONEY) */
+#secondaryButtons {
+  height: 100%;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+#secondaryButtons > button {
+  padding: 30px;
+  font-size: 1.5em;
+}
+
+/* TRANSFER FORM */
+#transferInput {
+  display: none;
+}
+
+#transferInput > button {
+  padding: 30px;
+  font-size: 1.5em;
+}
+
+/* RETURN BUTTONS (ARROWS <-) */
+#returnButtonCashier,
+.returnButtonMainButtons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  margin: 10px;
+}
+
+#formTransfer {
+  background-color: transparent;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 360px) {
+  #transferInput > form {
+    padding: 0px;
+    border-radius: 0;
+  }
+  #createAccount,
+  #initialAccount {
+    width: 100%;
+    font-size: 1.2em;
+  }
+  #cashier {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  body {
+    font-size: 20px;
+  }
+  #mainButtons,
+  #secondaryButtons {
+    grid-template-columns: 1fr;
+  }
+  #returnButtonCashier,
+  .returnButtonMainButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f11a;
+    border: none;
+  }
+  form {
+    font-size: 1.2em;
+  }
+
+  form > button {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  body {
+    font-size: 35px;
+  }
+  #createAccount,
+  #initialAccount {
+    width: 600px;
+    font-size: 2em;
+  }
+  #cashier {
+    width: 1600px;
+  }
+  form {
+    font-size: 1.8em;
+  }
+  form > button {
+    font-size: 1.8em;
+  }
+}
